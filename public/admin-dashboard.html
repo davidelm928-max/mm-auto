@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            width: 250px;
+            background: #333;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            transition: all 0.3s;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .main {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+            .main {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#add-car">Add Car</a></li>
+            <li><a href="#manage-cars">Manage Cars</a></li>
+            <li><a href="#contacts-crm">Contacts CRM</a></li>
+            <li><a href="#homepage-editor">Homepage Editor</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1 id="dashboard">Admin Dashboard</h1>
+        <section id="add-car">
+            <h2>Add Car</h2>
+            <form>
+                <label for="make">Make:</label>
+                <input type="text" id="make" name="make" required>
+                <label for="model">Model:</label>
+                <input type="text" id="model" name="model" required>
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" required>
+                <button type="submit">Add Car</button>
+            </form>
+        </section>
+        <section id="manage-cars">
+            <h2>Manage Cars</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Toyota</td>
+                        <td>Camry</td>
+                        <td>2020</td>
+                        <td><button>Edit</button><button>Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="contacts-crm">
+            <h2>Contacts CRM</h2>
+            <p>Manage your contacts here.</p>
+        </section>
+        <section id="homepage-editor">
+            <h2>Homepage Editor</h2>
+            <p>Edit your homepage content here.</p>
+        </section>
+    </div>
+</body>
+</html>
